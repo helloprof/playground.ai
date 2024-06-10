@@ -35,8 +35,20 @@ function getModelByID(id) {
     })
 }
 
+function getModelByCategory(categoryID) {
+    return new Promise((resolve, reject) => {
+        let modelByCategory = models.filter(model => model.category == categoryID)
+        if (modelByCategory) {
+            resolve(modelByCategory)
+        } else {
+            reject("No model by that Category found")
+        }    
+    })
+}
+
 module.exports = {
     initialize,
     getModels,
-    getModelByID
+    getModelByID,
+    getModelByCategory
 }
