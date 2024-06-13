@@ -26,6 +26,10 @@ app.get("/",(req, res) => {
     
 })
 
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/about.html"))
+})
+
 app.get("/models", (req, res) => {
     // conditional rendering of req.query.id
     // /models?id=1
