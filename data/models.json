@@ -4,7 +4,8 @@
         "name":"ChatGPT",
         "version": 4,
         "company": "OpenAI",
-        "image":"asjdksadkas",
+        "image":"https://www.edigitalagency.com.au/wp-content/uploads/ChatGPT-logo-PNG-medium-size-white-green-background.png",
+        "url": "https://www.chatgpt.com/",
         "category": 1
     },
     {
@@ -12,7 +13,8 @@
         "name":"Gemini",
         "version": 2,
         "company": "Google",
-        "image":"asjdksadkas",
+        "image":"https://logowik.com/content/uploads/images/google-ai-gemini91216.logowik.com.webp",
+        "url": "https://gemini.google.com/app", 
         "category": 1
     },
     {
@@ -20,7 +22,26 @@
         "name":"LLama",
         "version": 3,
         "company": "Meta/Facebook",
-        "image":"asjdksadkas",
+        "image":"https://media.licdn.com/dms/image/D4D12AQGSDHcylNVfcA/article-cover_image-shrink_600_2000/0/1713710970597?e=2147483647&v=beta&t=FV__dZLzmCHa6Fm6-eqDzGa4KNLie6MFDC6SQ1FGiQI",
+        "url":"https://llama.meta.com/llama3/",
+        "category": 3
+    },
+    {
+        "id": 4,
+        "name":"Phind",
+        "version": 3,
+        "company": "Phind",
+        "image":"https://res.cloudinary.com/dvzkzccvn/images/f_auto,q_auto/v1690884811/Phind_AI_Logo_rzfxrm/Phind_AI_Logo_rzfxrm.jpg?_i=AA",
+        "url":"https://phind.com/",
+        "category": 3
+    },
+    {
+        "id": 5,
+        "name":"Co-Pilot",
+        "version": 3,
+        "company": "Microsoft",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/2048px-Microsoft_365_Copilot_Icon.svg.png",
+        "url":"https://copilot.microsoft.com/",
         "category": 3
     }
 ]
