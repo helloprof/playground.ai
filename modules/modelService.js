@@ -1,6 +1,7 @@
 const modelData = require("../data/models.json")
 const categoryData = require("../data/categories.json")
 let models = []
+let categories = []
 
 function initialize() {
     return new Promise((resolve, reject) => {
@@ -23,6 +24,18 @@ function getModels() {
         }
     })
 }
+
+function getCategories() {
+    return new Promise((resolve, reject) => {
+        if (categoryData) {
+            categories = categoryData
+            resolve(categories)
+        } else {
+            reject("No categories available")
+        }
+    })
+}
+
 
 function getModelByID(id) {
     return new Promise((resolve, reject) => {
@@ -50,5 +63,6 @@ module.exports = {
     initialize,
     getModels,
     getModelByID,
-    getModelByCategory
+    getModelByCategory,
+    getCategories
 }
