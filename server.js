@@ -4,6 +4,8 @@ const app = express()
 const PORT = 8080
 const path = require("path")
 const modelService = require("./modules/modelService")
+app.set('view engine', 'ejs');
+
 // modelService.testFx()
 
 // let checkModelID = (req, res, next) => {
@@ -19,15 +21,19 @@ const modelService = require("./modules/modelService")
 app.use(express.static("public"))
 
 app.get("/",(req, res) => {
-    res.sendFile(path.join(__dirname, "/views/index.html"))
-    // res.redirect("/models")
+    // res.sendFile(path.join(__dirname, "/views/index.html"))
+    modelService.getModels().then((models) => {
+        res.render("index", {
+            models: models
+        })
+    })
 
-    console.log(req.params)
     
 })
 
 app.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/about.html"))
+    // res.sendFile(path.join(__dirname, "/views/about.html"))
+    res.render("about")
 })
 
 app.get("/models", (req, res) => {
@@ -35,7 +41,9 @@ app.get("/models", (req, res) => {
     // /models?id=1
     if (req.query.category) {
         modelService.getModelByCategory(req.query.category).then((modelsByCategory) => {
-            res.json(modelsByCategory)
+            res.render("index", {
+                models: modelsByCategory
+            })
         }).catch((err) => {
             console.log(err)
         })
@@ -47,6 +55,16 @@ app.get("/models", (req, res) => {
         })
     }
 
+})
+
+app.get("/categories", (req, res) => {
+    modelService.getCategories().then((categories) => {
+        res.render("categories", {
+            categories: categories
+        })
+    }).catch((err) => {
+        console.log(err)
+    })
 })
 
 
