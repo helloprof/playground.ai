@@ -5,6 +5,7 @@ const PORT = 8080
 const path = require("path")
 const modelService = require("./modules/modelService")
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 // modelService.testFx()
 
@@ -18,7 +19,7 @@ app.set('view engine', 'ejs');
 //     next()
 // }
 
-app.use(express.static("public"))
+app.use(express.static(__dirname + '/public'));
 
 app.get("/",(req, res) => {
     // res.sendFile(path.join(__dirname, "/views/index.html"))
