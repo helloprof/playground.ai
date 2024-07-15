@@ -1,47 +1,42 @@
 [
     {
-        "id": 1,
         "name":"ChatGPT",
         "version": 4,
         "company": "OpenAI",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png",
-        "url": "https://www.chatgpt.com/",
-        "category": 1
+        "imageURL":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png",
+        "website": "https://www.chatgpt.com/",
+        "categoryID": 1
     },
     {
-        "id": 2,
         "name":"Gemini",
         "version": 2,
         "company": "Google",
-        "image":"https://logowik.com/content/uploads/images/google-ai-gemini91216.logowik.com.webp",
-        "url": "https://gemini.google.com/app", 
-        "category": 1
+        "imageURL":"https://logowik.com/content/uploads/images/google-ai-gemini91216.logowik.com.webp",
+        "website": "https://gemini.google.com/app", 
+        "categoryID": 1
     },
     {
-        "id": 3,
         "name":"LLama",
         "version": 3,
         "company": "Meta/Facebook",
-        "image":"https://media.licdn.com/dms/image/D4D12AQGSDHcylNVfcA/article-cover_image-shrink_600_2000/0/1713710970597?e=2147483647&v=beta&t=FV__dZLzmCHa6Fm6-eqDzGa4KNLie6MFDC6SQ1FGiQI",
-        "url":"https://llama.meta.com/llama3/",
-        "category": 3
+        "imageURL":"https://media.licdn.com/dms/image/D4D12AQGSDHcylNVfcA/article-cover_image-shrink_600_2000/0/1713710970597?e=2147483647&v=beta&t=FV__dZLzmCHa6Fm6-eqDzGa4KNLie6MFDC6SQ1FGiQI",
+        "website":"https://llama.meta.com/llama3/",
+        "categoryID": 3
     },
     {
-        "id": 4,
         "name":"Phind",
         "version": 3,
         "company": "Phind",
-        "image":"https://res.cloudinary.com/dvzkzccvn/images/f_auto,q_auto/v1690884811/Phind_AI_Logo_rzfxrm/Phind_AI_Logo_rzfxrm.jpg?_i=AA",
-        "url":"https://phind.com/",
-        "category": 3
+        "imageURL":"https://res.cloudinary.com/dvzkzccvn/images/f_auto,q_auto/v1690884811/Phind_AI_Logo_rzfxrm/Phind_AI_Logo_rzfxrm.jpg?_i=AA",
+        "website":"https://phind.com/",
+        "categoryID": 3
     },
     {
-        "id": 5,
         "name":"Co-Pilot",
         "version": 3,
         "company": "Microsoft",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/2048px-Microsoft_365_Copilot_Icon.svg.png",
-        "url":"https://copilot.microsoft.com/",
-        "category": 3
+        "imageURL":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/2048px-Microsoft_365_Copilot_Icon.svg.png",
+        "website":"https://copilot.microsoft.com/",
+        "categoryID": 3
     }
 ]
