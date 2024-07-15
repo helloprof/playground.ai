@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
-    <script>
+    <!-- <script>
         fetch('https://quotable.io/random')
             .then((response) => response.json())
             .then((json) => {
@@ -15,20 +15,22 @@
                 const quote = document.getElementById('quote')
                 quote.textContent = `${json.content} - ${json.author}`
             });
-    </script>
+    </script> -->
 </head>
 
 <body>
 
     <%- include('partials/navbar')%>
-    <p id="quote"></p>
+    <!-- <p id="quote"></p> -->
+    <h1 class="text-center m-5 text-3xl">Categories</h1>
+    <button class="btn btn-primary m-5 w-full"><a href="/categories/new">Add Category</a></button>
 
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid grid-cols-3 gap-10 m-10">
 
 
         <% categories.forEach((category) => { %>
             <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <figure><img src="<%= category.imageURL%>" alt="Shoes" /></figure>
                 <div class="card-body">
                   <h2 class="card-title"><%= category.category%></h2>
                   <!-- <div class="card-actions justify-end">
