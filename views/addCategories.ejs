@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>New Model</title>
+</head>
+
+<body>
+
+  <%- include('partials/navbar')%>
+  <div class="w-1/2 m-auto">
+
+    <h1 class="text-center m-5">Add New Category</h1>
+    <form action="/categories/new" method="POST">
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Category
+        <input class="text-white grow" type="text" name="category" placeholder="Assistant" />
+      </label>
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Image URL
+        <input class="text-white grow" type="url" name="imageURL" placeholder="https://..." />
+      </label>
+      <button type="submit" class="btn btn-primary m-5 w-full">Add Category</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
