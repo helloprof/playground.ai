@@ -6,6 +6,7 @@ const path = require("path")
 const modelService = require("./modules/modelService")
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
+app.use(express.urlencoded({ extended: true }));
 
 // modelService.testFx()
 
@@ -63,6 +64,21 @@ app.get("/categories", (req, res) => {
         res.render("categories", {
             categories: categories
         })
+    }).catch((err) => {
+        console.log(err)
+    })
+})
+
+app.get("/categories/new", (req, res) => {
+    res.render("addCategories")
+})
+
+app.post("/categories/new", (req, res) => {
+    // res.render("addCategories")
+    // res.send(req.body)
+
+    modelService.addCategory(req.body).then(() => {
+        res.redirect("/categories")
     }).catch((err) => {
         console.log(err)
     })
