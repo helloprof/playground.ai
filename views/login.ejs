@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Login</title>
+</head>
+
+<body>
+
+  <%- include('partials/navbar')%>
+  <div class="w-1/2 m-auto">
+
+    <h1 class="text-center m-5">Login</h1>
+    <form action="/login" method="POST">
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Username
+        <input class="text-white grow" type="text" name="username" placeholder="Username" />
+      </label>
+
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Password
+        <input class="text-white grow" type="password" name="password" placeholder="Enter Password" />
+      </label>
+
+      <button type="submit" class="btn btn-primary m-5 w-full">Login</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
