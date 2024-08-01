@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Register User</title>
+</head>
+
+<body>
+
+  <%- include('partials/navbar')%>
+
+  <% if (errorMsg) { %>
+    <div role="alert" class="alert alert-error">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Error! <%= errorMsg %></span>
+      </div>
+  <% } %>
+
+  <% if (successMsg) { %>
+    <div role="alert" class="alert alert-success">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Success: <%=successMsg%></span>
+      </div>
+  <% } %>
+
+  <div class="w-1/2 m-auto">
+
+    <h1 class="text-center m-5">Register New User</h1>
+    <form action="/register" method="POST">
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Username
+        <input class="text-white grow" type="text" name="username" placeholder="Username" />
+      </label>
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Password
+        <input class="text-white grow" type="password" name="password" placeholder="Enter Password" />
+      </label>
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Confirm Password
+        <input class="text-white grow" type="password" name="password2" placeholder="Confirm Password" />
+      </label>
+      <label class="input input-bordered flex items-center gap-2 m-5 text-green-400">
+        Email
+        <input class="text-white grow" type="email" name="email" placeholder="Email" />
+      </label>
+      <button type="submit" class="btn btn-primary m-5 w-full">Register</button>
+    </form>
+  </div>
+
+
+
+</body>
+
+</html>
